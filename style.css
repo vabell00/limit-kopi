@@ -305,3 +305,31 @@ body.fade-in {
   margin-bottom: 40px;
   justify-items: center;
 }
+
+/* === Navbar aktif === */
+.navbar a.active {
+  background-color: #3b82f6;
+  border-radius: 6px;
+}
+
+/* === Efek masuk slide + fade === */
+.animate-slide-up {
+  animation: slideUpFade 0.6s ease-out;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Hover tombol sosial lebih interaktif === */
+.float-btn:hover {
+  transform: scale(1.15) rotate(2deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
