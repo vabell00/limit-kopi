@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Kontak LIMIT KOPI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="fade-in">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="profile.html">Profil</a>
+    <a href="menu.html">Menu</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <main class="container">
+    <h1>Kontak kami</h1>
+    <p>Tersedia juga di platform GrabFood dan GoFood</p>
+
+    <!-- Tombol Sosial -->
+    <div class="floating-bar">
+      <a href="https://wa.me/6281212118042?text=Halo%20Kak,%20saya%20mau%20pesan%20kopi%20di%20LIMIT%20KOPI%20☕" class="float-btn wa" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/limit.kopi/" class="float-btn ig" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://food.grab.com/id/en/restaurant/limit-kopi-pasir-angin-delivery/6-C6WHNBWGV8BYFE?sourceID=20250524_200902_671f9d76069a45ed8f6fdad4b30a650b_MEXMPS&nameSlug=online-delivery&id=6-C6WHNBWGV8BYFE" class="float-btn grab" target="_blank" aria-label="GrabFood">
+        <i class="fas fa-motorcycle"></i>
+      </a>
+      <a href="https://gofood.co.id/jakarta/restaurant/limit-kopi-cilngsi-a21d1fd3-c149-4160-8997-968df4d5a6f6" class="float-btn gojek" target="_blank" aria-label="GoFood">
+        <i class="fas fa-utensils"></i>
+      </a>
+    </div>
+
+    <!-- Tombol Kembali -->
+    <a class="kembali" href="profile.html">← Kembali ke Beranda</a>
+  </main>
+
+  <!-- Script Transisi Halaman -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href.includes(location.hostname)) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.href;
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

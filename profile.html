@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Profil LIMIT KOPI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-in">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="profile.html">Profil</a>
+    <a href="menu.html">Menu</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <main class="container">
+    <img src="foto.png" alt="Foto Kedai LIMIT KOPI" style="width: 300px; border-radius: 12px;" />
+
+    <h1>Tentang LIMIT KOPI</h1>
+    <p style="text-align: justify;"><span class="highlight">LIMIT KOPI</span> adalah kedai kopi kecil yang berdiri sederhana tepatnya 
+      di depan Indomaret Redwood FBVT, Desa Pasirangin, Cileungsi – Bogor. Dibalik tempat yang minimalis, 
+      kami menyajikan kopi dengan <span class="highlight">cita rasa lokal</span> dan pengalaman hangat bagi 
+      setiap pelanggan. Kami percaya: kopi yang baik bukan soal tempat mewah, tapi tentang rasa dan cerita
+       di baliknya. LIMIT KOPI jadi ruang singgah bagi kamu yang butuh istirahat, ngobrol, atau sekadar menikmati 
+      secangkir kopi di pinggir jalan.</p>
+
+    <section class="info-box" aria-label="Informasi kontak dan jam operasional">
+      <p><strong>Alamat:</strong> Jl. Cileungsi-Setu, depan Indomaret Redwood FBVT, Desa Pasirangin, Cileungsi–Bogor</p>
+      <p><strong>Jam Operasional:</strong> Setiap Hari, 12.00 – 00.00 WIB</p>
+      <p><strong>Tagline:</strong> Rasa Hangat, Ruang Dekat.</p>
+    </section>
+
+    <a class="button-link" href="menu.html" aria-label="Lihat menu LIMIT KOPI">→ Lihat Menu</a>
+  </main>
+
+  <!-- Script Transisi Halaman -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.target !== '_blank' && link.href.includes(location.hostname)) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.href;
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
